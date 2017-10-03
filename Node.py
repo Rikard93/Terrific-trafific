@@ -1,5 +1,3 @@
-import pygame
-
 class Node(object):
 
     def __init__(self,x,y):
