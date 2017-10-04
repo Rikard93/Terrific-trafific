@@ -3,7 +3,6 @@ class Vehicle(object):
         self.x = x
         self.y = y
         self.speed = speed
-        self.lastMove = time.time()
 
     def move(self, node):
         if self.x == node.x:
