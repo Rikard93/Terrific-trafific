@@ -1,20 +1,12 @@
 class Vehicle(object):
-    def __init__(self, x, y, speed):
-        self.x = x
-        self.y = y
-        self.speed = speed
 
-    def move(self, node):
-        if self.x == node.x:
-            pass
-        elif self.x > node.x:
-            self.x -= self.speed
-        else:
-            self.x += self.speed
+    def __init__(self, node):
+        self.current_node = node
 
-        if self.y == node.y:
-            pass
-        elif self.y < node.y:
-            self.y += self.speed
-        else:
-            self.y -= self.speed
+    def setPath(self, path):
+        self.path = path
+
+    def move(self):
+        current_index = self.path.index[self.current_node]
+        next_index = (current_index + 1) % len(self.path)
+        self.current_node = self.path[current_index]
