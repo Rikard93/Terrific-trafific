@@ -1,6 +1,7 @@
 import sys, pygame
 from Node import *
 from Vehicle import *
+
 pygame.init()
 
 size = width, height = 300,300
@@ -25,7 +26,6 @@ nodes[1].add(nodes[2])
 car = Vehicle(10, 10, 5)
 target = 1
 
-t = time.time()
 black = 0,0,0
 while 1:
     surface.fill(black)
